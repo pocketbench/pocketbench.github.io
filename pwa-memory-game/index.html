@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="it" data-theme="chiaro">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>Memory Famiglie</title>
+    <meta name="description" content="Gioco delle coppie a carte: animali, vegetali, veicoli e aerei." />
+    <meta name="theme-color" content="#e76f51" />
+    <link rel="manifest" href="manifest.webmanifest" />
+    <link rel="icon" href="icons/icon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="icons/icon-192.png" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body>
+    <main id="app">
+      <section id="menu" class="screen menu"></section>
+      <section id="game" class="screen game" hidden>
+        <div class="game__bar">
+          <button id="exit" class="btn btn--ghost" type="button" aria-label="Torna al menu">&larr;</button>
+          <div id="scoreboard" class="scoreboard" aria-live="polite"></div>
+        </div>
+        <div id="board" class="board"></div>
+      </section>
+    </main>
+    <dialog id="result" class="result"></dialog>
+    <script defer src="js/main.js"></script>
+  </body>
+</html>
