@@ -48,6 +48,14 @@ h2{margin:0;font-size:1.15rem;line-height:1.25}
 .open:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
 footer{padding-top:8px;padding-bottom:32px;color:var(--muted);font-size:.85rem}
 footer a{color:inherit}
+footer button{all:unset;cursor:pointer;text-decoration:underline}
+footer button:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+.consent{position:fixed;left:12px;right:12px;bottom:12px;max-width:640px;margin:0 auto;padding:14px 16px;border-radius:16px;background:var(--card);color:var(--ink);border:1px solid var(--line);box-shadow:var(--shadow);display:flex;flex-wrap:wrap;gap:10px 16px;align-items:center;z-index:10}
+.consent[hidden]{display:none}
+.consent p{flex:1 1 260px;margin:0;font-size:.9rem;line-height:1.4}
+.consent div{display:flex;gap:8px}
+.consent button{padding:8px 18px;border:1px solid var(--line);border-radius:999px;background:transparent;color:var(--ink);font:inherit;font-weight:600;cursor:pointer}
+.consent button.yes{background:var(--accent);border-color:var(--accent);color:var(--on-accent)}
 @media (prefers-reduced-motion:reduce){.nav{transition:none}}
 </style>
   </head>
@@ -127,7 +135,14 @@ footer a{color:inherit}
         </div>
       </article>
     </main>
-    <footer>Informativa sulla privacy: <a href="pwa-chi-sara/privacy.html">Chi Sarà?</a> · <a href="pwa-dama/privacy.html">Dama Amica</a> · <a href="pwa-memory-game/privacy.html">Memory Famiglie</a></footer>
+    <footer>
+      <div>Informativa sulla privacy dei giochi: <a href="pwa-chi-sara/privacy.html">Chi Sarà?</a> · <a href="pwa-dama/privacy.html">Dama Amica</a> · <a href="pwa-memory-game/privacy.html">Memory Famiglie</a></div>
+      <div>I giochi non raccolgono dati. Questa pagina, solo se acconsenti, usa Google Analytics per contare le visite. <button type="button" id="consent-reopen">Cambia scelta</button></div>
+    </footer>
+    <div class="consent" id="consent" role="dialog" aria-label="Statistiche delle visite" hidden>
+      <p>Posso contare le visite a questa pagina con Google Analytics? Usa cookie e invia dati anonimi a Google. I giochi non raccolgono dati in nessun caso.</p>
+      <div><button type="button" id="consent-no">Rifiuta</button><button type="button" id="consent-yes" class="yes">Accetta</button></div>
+    </div>
     <script>
 for (const box of document.querySelectorAll('.shots')) {
   const track = box.querySelector('.track');
@@ -152,6 +167,29 @@ for (const box of document.querySelectorAll('.shots')) {
   addEventListener('resize', update);
   update();
 }
+
+const ID = "G-RZDPRS7F37";
+const KEY = 'vetrina.statistiche';
+const bar = document.getElementById('consent');
+const read = () => { try { return localStorage.getItem(KEY); } catch { return null; } };
+const write = (v) => { try { localStorage.setItem(KEY, v); } catch {} };
+const load = () => {
+  window.dataLayer = window.dataLayer || [];
+  window.gtag = function () { dataLayer.push(arguments); };
+  gtag('js', new Date());
+  gtag('config', ID);
+  const s = document.createElement('script');
+  s.async = true;
+  s.src = 'https://www.googletagmanager.com/gtag/js?id=' + ID;
+  document.head.appendChild(s);
+};
+const choose = (v) => { write(v); bar.hidden = true; if (v === 'si') load(); };
+document.getElementById('consent-yes').addEventListener('click', () => choose('si'));
+document.getElementById('consent-no').addEventListener('click', () => choose('no'));
+document.getElementById('consent-reopen').addEventListener('click', () => { bar.hidden = false; });
+const saved = read();
+if (saved === 'si') load();
+else if (saved !== 'no') bar.hidden = false;
 </script>
   </body>
 </html>
