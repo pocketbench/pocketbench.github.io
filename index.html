@@ -3,15 +3,155 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Giochi</title>
-    <style>body{font:18px/1.6 system-ui,sans-serif;max-width:36rem;margin:2rem auto;padding:0 1rem}</style>
+    <title>Pocketbench · Giochi</title>
+    <meta name="description" content="Giochi da aprire nel browser o da installare su telefono e tablet. Funzionano anche senza connessione." />
+    <meta name="color-scheme" content="light dark" />
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="icon" href="favicon-32.png" sizes="32x32" type="image/png" />
+    <link rel="icon" href="favicon.ico" sizes="48x48" />
+    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+    <style>
+:root{--bg:#f4f1ea;--card:#fff;--ink:#1d2433;--muted:#5d6678;--line:#e3ddd0;--accent:#2a6f77;--on-accent:#fff;--shadow:0 1px 2px rgba(20,25,40,.06),0 8px 24px rgba(20,25,40,.08)}
+@media (prefers-color-scheme:dark){:root{--bg:#141a26;--card:#1d2535;--ink:#eef1f7;--muted:#a3adc2;--line:#2b3548;--accent:#5cc3cd;--on-accent:#0f1824;--shadow:0 1px 2px rgba(0,0,0,.4),0 8px 24px rgba(0,0,0,.35)}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif}
+header,main,footer{width:100%;max-width:1120px;margin:0 auto;padding:0 16px}
+header{padding-top:32px;padding-bottom:8px;display:flex;align-items:center;gap:16px}
+header svg{flex:none;width:56px;height:56px;border-radius:14px}
+h1{margin:0;font-size:1.65rem;line-height:1.2}
+.lead{margin:2px 0 0;color:var(--muted)}
+.grid{display:grid;gap:20px;grid-template-columns:repeat(auto-fill,minmax(min(100%,360px),1fr));padding-top:16px;padding-bottom:32px}
+.app{background:var(--card);border:1px solid var(--line);border-radius:20px;box-shadow:var(--shadow);overflow:hidden;display:flex;flex-direction:column}
+.shots{position:relative;background:#000}
+.track{display:flex;margin:0;padding:0;list-style:none;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.track::-webkit-scrollbar{display:none}
+.track:focus-visible{outline:3px solid var(--accent);outline-offset:-3px}
+.track li{flex:0 0 100%;scroll-snap-align:center}
+.track img{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:cover}
+.nav{position:absolute;top:50%;translate:0 -50%;width:40px;height:40px;border:0;border-radius:50%;display:grid;place-items:center;background:rgba(15,20,32,.6);color:#fff;cursor:pointer;backdrop-filter:blur(4px);transition:opacity .15s,background .15s}
+.nav:hover{background:rgba(15,20,32,.82)}
+.nav:focus-visible{outline:3px solid #fff;outline-offset:2px}
+.nav[disabled]{opacity:0;pointer-events:none}
+.prev{left:10px}.next{right:10px}
+.dots{position:absolute;left:50%;bottom:10px;translate:-50% 0;display:flex;gap:7px;padding:6px 10px;border-radius:999px;background:rgba(15,20,32,.55);pointer-events:none}
+.dots i{width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,.45)}
+.dots i.on{background:#fff}
+.info{display:flex;align-items:flex-start;gap:14px;padding:16px;flex:1}
+.icon{flex:none;width:72px;height:72px;border-radius:16px;box-shadow:0 1px 3px rgba(0,0,0,.25)}
+.text{flex:1;min-width:0}
+h2{margin:0;font-size:1.15rem;line-height:1.25}
+.text p{margin:2px 0 0;color:var(--muted);font-size:.93rem;line-height:1.4}
+.row{display:flex;justify-content:flex-end;margin-top:12px}
+.open{flex:none;padding:8px 22px;border-radius:999px;background:var(--accent);color:var(--on-accent);font-weight:600;text-decoration:none}
+.open:hover{filter:brightness(1.08)}
+.open:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+footer{padding-top:8px;padding-bottom:32px;color:var(--muted);font-size:.85rem}
+footer a{color:inherit}
+@media (prefers-reduced-motion:reduce){.nav{transition:none}}
+</style>
   </head>
   <body>
-    <h1>Giochi</h1>
-    <ul>
-      <li><a href="pwa-chi-sara/">Chi Sarà?</a> &ndash; Scopri chi è facendo domande sì/no: il gioco ti insegna a scegliere la domanda migliore e a ragionare con le probabilità.</li>
-      <li><a href="pwa-dama/">Dama Amica</a> &ndash; Dama italiana e inglese con un compagno simpatico che ti insegna a giocare: consigli illimitati e livelli che crescono con te.</li>
-      <li><a href="pwa-memory-game/">Memory Famiglie</a> &ndash; Gioco delle coppie a carte: animali, vegetali, veicoli e aerei.</li>
-    </ul>
+    <header>
+      <svg viewBox="0 0 512 512" aria-hidden="true"><rect width="512" height="512" rx="112" fill="#1f2a44"/><rect x="84" y="84" width="164" height="164" rx="40" fill="#e76f51"/><rect x="264" y="84" width="164" height="164" rx="40" fill="#2a9d8f"/><rect x="84" y="264" width="164" height="164" rx="40" fill="#6f7fd6"/><rect x="264" y="264" width="164" height="164" rx="40" fill="#f3c969"/><circle cx="346" cy="346" r="34" fill="#1f2a44"/></svg>
+      <div>
+        <h1>Giochi</h1>
+        <p class="lead">Giochi da aprire nel browser o da installare su telefono e tablet. Funzionano anche senza connessione.</p>
+      </div>
+    </header>
+    <main class="grid">
+      <article class="app" id="pwa-chi-sara">
+        <div class="shots" role="group" aria-roledescription="carosello" aria-label="Schermate di Chi Sarà?">
+          <ul class="track" tabindex="0">
+            <li><img src="vetrina/pwa-chi-sara-1.jpg" width="1280" height="720" alt="Chi Sarà?: partita in corso"></li>
+            <li><img src="vetrina/pwa-chi-sara-2.jpg" width="1280" height="720" alt="Chi Sarà?: menu iniziale" loading="lazy"></li>
+            <li><img src="vetrina/pwa-chi-sara-3.jpg" width="1280" height="720" alt="Chi Sarà?: regolazioni di usabilità" loading="lazy"></li>
+          </ul>
+          <button class="nav prev" type="button" aria-label="Schermata precedente"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+          <button class="nav next" type="button" aria-label="Schermata successiva"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M9 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+          <div class="dots" aria-hidden="true"><i></i><i></i><i></i></div>
+        </div>
+        <div class="info">
+          <img class="icon" src="pwa-chi-sara/icons/icon-192.png" width="72" height="72" alt="">
+          <div class="text">
+            <h2>Chi Sarà?</h2>
+            <p>Scopri chi è con domande sì/no e impara a ragionare con le probabilità.</p>
+            <div class="row">
+              <a class="open" href="pwa-chi-sara/" aria-label="Apri Chi Sarà?">Apri</a>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article class="app" id="pwa-dama">
+        <div class="shots" role="group" aria-roledescription="carosello" aria-label="Schermate di Dama Amica">
+          <ul class="track" tabindex="0">
+            <li><img src="vetrina/pwa-dama-1.jpg" width="1280" height="720" alt="Dama Amica: partita in corso"></li>
+            <li><img src="vetrina/pwa-dama-2.jpg" width="1280" height="720" alt="Dama Amica: menu iniziale" loading="lazy"></li>
+            <li><img src="vetrina/pwa-dama-3.jpg" width="1280" height="720" alt="Dama Amica: regolazioni di usabilità" loading="lazy"></li>
+          </ul>
+          <button class="nav prev" type="button" aria-label="Schermata precedente"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+          <button class="nav next" type="button" aria-label="Schermata successiva"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M9 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+          <div class="dots" aria-hidden="true"><i></i><i></i><i></i></div>
+        </div>
+        <div class="info">
+          <img class="icon" src="pwa-dama/icons/icon-192.png" width="72" height="72" alt="">
+          <div class="text">
+            <h2>Dama Amica</h2>
+            <p>Dama italiana e inglese con un compagno simpatico che ti insegna a giocare.</p>
+            <div class="row">
+              <a class="open" href="pwa-dama/" aria-label="Apri Dama Amica">Apri</a>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article class="app" id="pwa-memory-game">
+        <div class="shots" role="group" aria-roledescription="carosello" aria-label="Schermate di Memory Famiglie">
+          <ul class="track" tabindex="0">
+            <li><img src="vetrina/pwa-memory-game-1.jpg" width="1280" height="720" alt="Memory Famiglie: partita in corso"></li>
+            <li><img src="vetrina/pwa-memory-game-2.jpg" width="1280" height="720" alt="Memory Famiglie: menu iniziale" loading="lazy"></li>
+            <li><img src="vetrina/pwa-memory-game-3.jpg" width="1280" height="720" alt="Memory Famiglie: regolazioni di usabilità" loading="lazy"></li>
+          </ul>
+          <button class="nav prev" type="button" aria-label="Schermata precedente"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+          <button class="nav next" type="button" aria-label="Schermata successiva"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M9 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+          <div class="dots" aria-hidden="true"><i></i><i></i><i></i></div>
+        </div>
+        <div class="info">
+          <img class="icon" src="pwa-memory-game/icons/icon-192.png" width="72" height="72" alt="">
+          <div class="text">
+            <h2>Memory Famiglie</h2>
+            <p>Gioco delle coppie a carte: animali, vegetali, veicoli e aerei.</p>
+            <div class="row">
+              <a class="open" href="pwa-memory-game/" aria-label="Apri Memory Famiglie">Apri</a>
+            </div>
+          </div>
+        </div>
+      </article>
+    </main>
+    <footer>Informativa sulla privacy: <a href="pwa-chi-sara/privacy.html">Chi Sarà?</a> · <a href="pwa-dama/privacy.html">Dama Amica</a> · <a href="pwa-memory-game/privacy.html">Memory Famiglie</a></footer>
+    <script>
+for (const box of document.querySelectorAll('.shots')) {
+  const track = box.querySelector('.track');
+  const prev = box.querySelector('.prev');
+  const next = box.querySelector('.next');
+  const dots = [...box.querySelectorAll('.dots i')];
+  const smooth = matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth';
+  const update = () => {
+    const i = Math.round(track.scrollLeft / track.clientWidth);
+    dots.forEach((d, k) => d.classList.toggle('on', k === i));
+    prev.disabled = i <= 0;
+    next.disabled = i >= dots.length - 1;
+  };
+  const go = (step) => {
+    track.scrollBy({ left: step * track.clientWidth, behavior: smooth });
+    requestAnimationFrame(update);
+  };
+  prev.addEventListener('click', () => go(-1));
+  next.addEventListener('click', () => go(1));
+  track.addEventListener('scroll', update, { passive: true });
+  track.addEventListener('scrollend', update);
+  addEventListener('resize', update);
+  update();
+}
+</script>
   </body>
 </html>
