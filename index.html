@@ -172,6 +172,7 @@ for (const box of document.querySelectorAll('.shots')) {
   };
   const go = (step) => {
     track.scrollBy({ left: step * track.clientWidth, behavior: smooth });
+    update();
     requestAnimationFrame(update);
   };
   prev.addEventListener('click', () => go(-1));
