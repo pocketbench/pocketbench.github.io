@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="it">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>Chi Sarà?</title>
+    <meta name="description" content="Scopri chi è facendo domande sì/no: il gioco ti insegna a scegliere la domanda migliore e a ragionare con le probabilità." />
+    <meta name="theme-color" content="#3b4a8c" />
+    <link rel="manifest" href="manifest.webmanifest" />
+    <link rel="icon" href="icons/icon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="icons/icon-192.png" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body>
+    <main id="app">
+      <section id="menu" class="screen menu"></section>
+      <section id="game" class="screen game" hidden>
+        <header class="game__bar">
+          <button id="exit" class="btn btn--ghost" type="button" aria-label="Menu">&larr;</button>
+          <div id="scoreboard" class="scoreboard" aria-live="polite"></div>
+          <button id="hintBtn" class="btn btn--accent" type="button">💡</button>
+        </header>
+        <div class="game__main">
+          <div class="game__boardwrap"><div id="board" class="board"></div></div>
+          <aside id="side" class="game__side">
+            <div id="secret" class="secret"></div>
+            <p id="status" class="status" aria-live="polite"></p>
+            <div id="review" class="review" hidden aria-live="polite"></div>
+            <div id="confirm" class="confirm" hidden></div>
+            <div id="coach" class="coachbox" hidden aria-live="polite"></div>
+            <div id="picker" class="picker" hidden></div>
+            <ul id="log" class="log" hidden></ul>
+          </aside>
+        </div>
+      </section>
+    </main>
+    <dialog id="result" class="result"></dialog>
+    <script defer src="js/main.js"></script>
+  </body>
+</html>
