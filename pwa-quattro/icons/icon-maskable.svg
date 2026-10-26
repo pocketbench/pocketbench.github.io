@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <rect width="512" height="512" fill="#137a7f"/>
+  <g transform="translate(256 256) scale(.78) translate(-256 -256)">
+    <circle cx="96" cy="136" r="36" fill="#7b4fb8" stroke="#4a2a80" stroke-width="6"/><circle cx="96" cy="136" r="9" fill="#ffffff" fill-opacity=".6"/>
+    <circle cx="176" cy="136" r="36" fill="#f08a24" stroke="#a85500" stroke-width="6"/><circle cx="176" cy="136" r="17" fill="none" stroke="#ffffff" stroke-opacity=".55" stroke-width="5"/>
+    <circle cx="256" cy="136" r="36" fill="#f08a24" stroke="#a85500" stroke-width="6"/><circle cx="256" cy="136" r="17" fill="none" stroke="#ffffff" stroke-opacity=".55" stroke-width="5"/>
+    <circle cx="336" cy="136" r="36" fill="#f08a24" stroke="#a85500" stroke-width="6"/><circle cx="336" cy="136" r="17" fill="none" stroke="#ffffff" stroke-opacity=".55" stroke-width="5"/>
+    <circle cx="416" cy="136" r="36" fill="#e3f0f0"/>
+    <circle cx="96" cy="216" r="36" fill="#f08a24" stroke="#a85500" stroke-width="6"/><circle cx="96" cy="216" r="17" fill="none" stroke="#ffffff" stroke-opacity=".55" stroke-width="5"/>
+    <circle cx="176" cy="216" r="36" fill="#7b4fb8" stroke="#4a2a80" stroke-width="6"/><circle cx="176" cy="216" r="9" fill="#ffffff" fill-opacity=".6"/>
+    <circle cx="256" cy="216" r="36" fill="#f08a24" stroke="#a85500" stroke-width="6"/><circle cx="256" cy="216" r="17" fill="none" stroke="#ffffff" stroke-opacity=".55" stroke-width="5"/>
+    <circle cx="336" cy="216" r="36" fill="#e3f0f0"/>
+    <circle cx="416" cy="216" r="36" fill="#e3f0f0"/>
+    <circle cx="96" cy="296" r="36" fill="#e3f0f0"/>
+    <circle cx="176" cy="296" r="36" fill="#e3f0f0"/>
+    <circle cx="256" cy="296" r="36" fill="#7b4fb8" stroke="#4a2a80" stroke-width="6"/><circle cx="256" cy="296" r="9" fill="#ffffff" fill-opacity=".6"/>
+    <circle cx="336" cy="296" r="36" fill="#f08a24" stroke="#a85500" stroke-width="6"/><circle cx="336" cy="296" r="17" fill="none" stroke="#ffffff" stroke-opacity=".55" stroke-width="5"/>
+    <circle cx="416" cy="296" r="36" fill="#e3f0f0"/>
+    <circle cx="96" cy="376" r="36" fill="#e3f0f0"/>
+    <circle cx="176" cy="376" r="36" fill="#e3f0f0"/>
+    <circle cx="256" cy="376" r="36" fill="#e3f0f0"/>
+    <circle cx="336" cy="376" r="36" fill="#7b4fb8" stroke="#4a2a80" stroke-width="6"/><circle cx="336" cy="376" r="9" fill="#ffffff" fill-opacity=".6"/>
+    <circle cx="416" cy="376" r="36" fill="#e3f0f0"/>
+  </g>
+</svg>

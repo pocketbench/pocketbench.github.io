@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="it" data-version="1.1.2">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>Flotta Amica</title>
+    <meta name="description" content="Affonda la flotta nemica con un compagno simpatico che ti insegna a ragionare con le probabilità: consigli illimitati e livelli che crescono con te." />
+    <meta name="theme-color" content="#0f5f8a" />
+    <link rel="manifest" href="manifest.webmanifest" />
+    <link rel="icon" href="icons/icon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="icons/icon-192.png" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body>
+    <main id="app">
+      <section id="menu" class="screen menu"></section>
+      <section id="game" class="screen game" hidden>
+        <header class="game__bar">
+          <button id="exit" class="btn btn--ghost" type="button" aria-label="Menu">&larr;</button>
+          <div id="scoreboard" class="scoreboard" aria-live="polite"></div>
+          <button class="usab-open" type="button" data-usability>Aa</button>
+          <button id="adviceBtn" class="btn btn--accent" type="button">💡</button>
+        </header>
+        <div class="game__main">
+          <div class="game__boardwrap">
+            <h2 id="seaTitle" class="game__title"></h2>
+            <div id="sea" class="sea"></div>
+          </div>
+          <aside class="game__side">
+            <section id="place" class="place" hidden>
+              <h2 id="placeTitle" class="game__title"></h2>
+              <div id="chips" class="chips"></div>
+              <div class="place__actions">
+                <button id="rotate" class="btn" type="button"></button>
+                <button id="shuffle" class="btn" type="button"></button>
+                <button id="go" class="btn btn--primary" type="button"></button>
+              </div>
+            </section>
+            <div id="companion" class="bubble" hidden aria-live="polite"></div>
+            <p id="status" class="status" aria-live="polite"></p>
+            <p id="log" class="log" aria-live="polite"></p>
+            <p id="feedback" class="feedback" aria-live="polite"></p>
+            <section id="advice" class="advice" hidden></section>
+            <div id="miniBox" class="minisea" hidden>
+              <h2 id="miniTitle" class="game__title"></h2>
+              <div id="mini" class="sea sea--mini"></div>
+            </div>
+          </aside>
+        </div>
+      </section>
+    </main>
+    <dialog id="result" class="result"></dialog>
+    <dialog id="usab" class="usab"></dialog>
+    <script defer src="js/main.js"></script>
+  </body>
+</html>

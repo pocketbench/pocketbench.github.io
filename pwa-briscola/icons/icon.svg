@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <rect width="512" height="512" rx="96" fill="#1d6b4f"/>
+  <g transform="translate(146 270) rotate(-14)">
+    <rect x="-78" y="-118" width="156" height="236" rx="18" fill="#fffaf0" stroke="#b9a98a" stroke-width="6"/>
+    <circle cx="0" cy="0" r="54" fill="#f2c230" stroke="#8a6a00" stroke-width="8"/><circle cx="0" cy="0" r="34" fill="none" stroke="#8a6a00" stroke-width="7"/><circle cx="0" cy="0" r="11" fill="#8a6a00"/>
+    <text x="-60" y="-84" font-family="Georgia, serif" font-size="46" font-weight="800" fill="#8a6a00">A</text>
+  </g>
+  <g transform="translate(350 262) rotate(12)">
+    <rect x="-78" y="-118" width="156" height="236" rx="18" fill="#fffaf0" stroke="#b9a98a" stroke-width="6"/>
+    <g transform="rotate(28)"><path d="M0 -70l22 86h-44z" fill="#7fa6d6" stroke="#1f4f86" stroke-width="7" stroke-linejoin="round"/><rect x="-36" y="16" width="72" height="14" rx="6" fill="#1f4f86"/><rect x="-7" y="30" width="14" height="38" rx="5" fill="#1f4f86"/></g>
+    <text x="-60" y="-84" font-family="Georgia, serif" font-size="46" font-weight="800" fill="#1f4f86">3</text>
+  </g>
+</svg>
