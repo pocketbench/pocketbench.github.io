@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <rect width="512" height="512" fill="#a1432f"/>
+  <g transform="translate(146 270) rotate(-14)">
+    <rect x="-78" y="-118" width="156" height="236" rx="18" fill="#fffaf0" stroke="#b9a98a" stroke-width="6"/>
+    <circle cx="0" cy="0" r="54" fill="#f2c230" stroke="#8a6a00" stroke-width="8"/><circle cx="0" cy="0" r="34" fill="none" stroke="#8a6a00" stroke-width="7"/><circle cx="0" cy="0" r="11" fill="#8a6a00"/>
+    <text x="-60" y="-84" font-family="Georgia, serif" font-size="46" font-weight="800" fill="#8a6a00">7</text>
+  </g>
+  <g transform="translate(350 262) rotate(12)">
+    <rect x="-78" y="-118" width="156" height="236" rx="18" fill="#fffaf0" stroke="#b9a98a" stroke-width="6"/>
+    <g transform="rotate(-28)"><path d="M-14 -66C-8 -84 22 -84 28 -64c6 30 -4 60 -8 88-2 12-26 12-28 0-6-30-20-62-6-90z" fill="#6f9a3c" stroke="#3f5f1f" stroke-width="7" stroke-linejoin="round"/></g>
+    <text x="-60" y="-84" font-family="Georgia, serif" font-size="46" font-weight="800" fill="#3f5f1f">A</text>
+  </g>
+  <path d="M96 440c60-26 130-34 320-6" fill="none" stroke="#f0b04e" stroke-width="18" stroke-linecap="round" opacity=".9"/>
+</svg>

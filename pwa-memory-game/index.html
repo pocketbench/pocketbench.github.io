@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="it" data-version="1.1.4" data-theme="chiaro">
+<html lang="it" data-version="1.2.1" data-theme="chiaro">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
@@ -19,6 +19,7 @@
         <div class="game__bar">
           <button id="exit" class="btn btn--ghost" type="button" aria-label="Torna al menu">&larr;</button>
           <div id="scoreboard" class="scoreboard" aria-live="polite"></div>
+          <button class="manual-open" type="button" data-manual></button>
           <button class="usab-open" type="button" data-usability aria-label="Usabilità" title="Usabilità">Aa</button>
         </div>
         <div id="board" class="board"></div>
@@ -26,6 +27,7 @@
     </main>
     <dialog id="result" class="result"></dialog>
     <dialog id="usab" class="usab"></dialog>
+    <dialog id="manual" class="manual"></dialog>
     <script defer src="js/main.js"></script>
   </body>
 </html>

@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <rect width="512" height="512" fill="#6d3fa0"/>
+  <g transform="translate(256 170)">
+    <circle r="96" fill="#ffffff" stroke="#f0b04e" stroke-width="14"/>
+    <text y="40" font-family="Helvetica,Arial,sans-serif" font-weight="800" font-size="110" text-anchor="middle" fill="#22262b">90</text>
+  </g>
+  <g transform="translate(70 318)">
+    <rect width="372" height="130" rx="18" fill="#f4ead2" stroke="#cdbfa0" stroke-width="6"/>
+    <g font-family="Helvetica,Arial,sans-serif" font-weight="800" font-size="40" text-anchor="middle" fill="#22262b">
+      <rect x="22" y="22" width="62" height="40" rx="6" fill="#fffdf7"/><text x="53" y="53">7</text>
+      <rect x="95" y="22" width="62" height="40" rx="6" fill="#f0b04e"/><text x="126" y="53">23</text>
+      <rect x="168" y="22" width="62" height="40" rx="6" fill="#fffdf7"/><text x="199" y="53">41</text>
+      <rect x="241" y="22" width="62" height="40" rx="6" fill="#f0b04e"/><text x="272" y="53">68</text>
+      <rect x="22" y="70" width="62" height="40" rx="6" fill="#f0b04e"/><text x="53" y="101">12</text>
+      <rect x="95" y="70" width="62" height="40" rx="6" fill="#fffdf7"/><text x="126" y="101">35</text>
+      <rect x="168" y="70" width="62" height="40" rx="6" fill="#f0b04e"/><text x="199" y="101">54</text>
+      <rect x="241" y="70" width="62" height="40" rx="6" fill="#fffdf7"/><text x="272" y="101">79</text>
+    </g>
+  </g>
+</svg>

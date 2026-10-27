@@ -1,0 +1,20 @@
+{
+  "name": "Griglia Amica",
+  "short_name": "Griglia",
+  "description": "Il rompicapo dei numeri da 1 a 9 con un compagno simpatico che ti insegna le tecniche: suggerimenti illimitati e schemi che crescono con te.",
+  "lang": "it",
+  "id": "./",
+  "categories": ["games"],
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#eef2f7",
+  "theme_color": "#3b6ea5",
+  "icons": [
+    { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" },
+    { "src": "icons/icon.svg", "sizes": "any", "type": "image/svg+xml" }
+  ]
+}

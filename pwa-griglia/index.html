@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="it" data-version="1.3.1">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>Griglia Amica</title>
+    <meta name="description" content="Il rompicapo dei numeri da 1 a 9 con un compagno simpatico che ti insegna le tecniche: suggerimenti illimitati e schemi che crescono con te." />
+    <meta name="theme-color" content="#3b6ea5" />
+    <link rel="manifest" href="manifest.webmanifest" />
+    <link rel="icon" href="icons/icon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="icons/icon-192.png" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body>
+    <main id="app">
+      <section id="menu" class="screen menu"></section>
+      <section id="game" class="screen game" hidden>
+        <header class="game__bar">
+          <button id="exit" class="btn btn--ghost" type="button" aria-label="Menu">&larr;</button>
+          <div id="scoreboard" class="scoreboard"></div>
+          <button class="manual-open" type="button" data-manual></button>
+          <button class="usab-open" type="button" data-usability>Aa</button>
+          <button id="hintBtn" class="btn btn--accent" type="button"></button>
+        </header>
+        <div class="game__main">
+          <div class="game__boardwrap"><div id="board" class="board" role="grid"></div></div>
+          <aside class="game__side">
+            <p id="status" class="status" aria-live="polite"></p>
+            <p id="feedback" class="feedback" aria-live="polite"></p>
+            <div id="pad" class="pad"></div>
+            <div id="tools" class="tools"></div>
+            <section id="hint" class="advice" hidden aria-live="polite"></section>
+            <div id="companion" class="bubble" hidden aria-live="polite"></div>
+          </aside>
+        </div>
+      </section>
+    </main>
+    <dialog id="result" class="result"></dialog>
+    <dialog id="usab" class="usab"></dialog>
+    <dialog id="manual" class="manual"></dialog>
+    <script defer src="js/main.js"></script>
+  </body>
+</html>
