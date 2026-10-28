@@ -1,7 +1,7 @@
 // Service worker: precache di tutti gli asset (elenco e versione generati da scripts/build.js).
 // Il dominio è condiviso con gli altri giochi: si cancellano solo le cache di questo gioco (prefisso).
 const PREFIX = 'scopa-amica-';
-const CACHE = `${PREFIX}2c74a6f949`;
+const CACHE = `${PREFIX}627b22db2d`;
 const ASSETS = ["./","./css/main.css","./icons/icon-192.png","./icons/icon-512.png","./icons/icon-maskable-512.png","./icons/icon-maskable.svg","./icons/icon.svg","./index.html","./js/main.js","./manifest.webmanifest"];
 
 self.addEventListener('install', (event) => {

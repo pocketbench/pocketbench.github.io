@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="it" data-version="1.2.1" data-theme="chiaro">
+<html lang="it" data-version="1.6.6" data-theme="chiaro">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
@@ -17,10 +17,16 @@
       <section id="menu" class="screen menu"></section>
       <section id="game" class="screen game" hidden>
         <div class="game__bar">
-          <button id="exit" class="btn btn--ghost" type="button" aria-label="Torna al menu">&larr;</button>
+          <button id="exit" class="btn btn--ghost" type="button" >&larr;</button>
           <div id="scoreboard" class="scoreboard" aria-live="polite"></div>
+          <button id="adviceBtn" class="btn btn--ghost advice-open" type="button" hidden></button>
           <button class="manual-open" type="button" data-manual></button>
-          <button class="usab-open" type="button" data-usability aria-label="Usabilità" title="Usabilità">Aa</button>
+          <button class="usab-open" type="button" data-usability>Aa</button>
+        </div>
+        <div id="coach" class="coach">
+          <p class="coach__advice" data-advice hidden></p>
+          <p class="coach__verdict" data-verdict hidden></p>
+          <div class="bubble" data-companion hidden></div>
         </div>
         <div id="board" class="board"></div>
       </section>

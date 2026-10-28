@@ -30,7 +30,7 @@
 *{box-sizing:border-box}
 html{-webkit-text-size-adjust:100%}
 body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif}
-header,main,footer{width:100%;max-width:1120px;margin:0 auto;padding:0 16px}
+header,main,footer,.filters{width:100%;max-width:1120px;margin:0 auto;padding:0 16px}
 header{padding-top:32px;padding-bottom:8px;display:flex;align-items:center;gap:16px}
 header svg{flex:none;width:56px;height:56px;border-radius:14px}
 h1{margin:0;font-size:1.65rem;line-height:1.2}
@@ -56,6 +56,18 @@ h1{margin:0;font-size:1.65rem;line-height:1.2}
 .text{flex:1;min-width:0}
 h2{margin:0;font-size:1.15rem;line-height:1.25}
 .text p{margin:2px 0 0;color:var(--muted);font-size:.93rem;line-height:1.4}
+.tags{font-size:.8rem!important;font-weight:600}
+.filters{display:flex;flex-wrap:wrap;align-items:center;gap:8px 20px;padding-top:12px}
+.cats{display:flex;flex-wrap:wrap;gap:8px}
+.filters button{padding:6px 16px;border:1px solid var(--line);border-radius:999px;background:var(--card);color:var(--ink);font:inherit;font-size:.9rem;cursor:pointer}
+.filters button[aria-pressed=true]{background:var(--accent);border-color:var(--accent);color:var(--on-accent);font-weight:600}
+.filters .multi{display:inline-flex;align-items:center;gap:8px;border-radius:8px;background:transparent;padding:6px 12px 6px 8px}
+.filters .multi::before{content:'';width:18px;height:18px;border:2px solid var(--muted);border-radius:4px;flex:none}
+.filters .multi[aria-pressed=true]{background:transparent;color:var(--ink);border-color:var(--line)}
+.filters .multi[aria-pressed=true]::before{border-color:var(--accent);background:var(--accent) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M5 12.5l4.5 4.5L19 7.5' fill='none' stroke='white' stroke-width='3.2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/14px no-repeat}
+.filters button:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+.app[hidden]{display:none}
+.filters[hidden]{display:none}
 .row{display:flex;justify-content:flex-end;margin-top:12px}
 .open{flex:none;padding:8px 22px;border-radius:999px;background:var(--accent);color:var(--on-accent);font-weight:600;text-decoration:none}
 .open:hover{filter:brightness(1.08)}
@@ -81,8 +93,18 @@ footer button:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
         <p class="lead">Giochi da aprire nel browser o da installare su telefono e tablet. Funzionano anche senza connessione.</p>
       </div>
     </header>
+    <div class="filters" id="filtri" role="group" aria-label="Filtra i giochi" hidden>
+      <div class="cats" role="group" aria-label="Categoria">
+        <button type="button" data-categoria="" aria-pressed="true">Tutti</button>
+        <button type="button" data-categoria="carte" aria-pressed="false">Carte</button>
+        <button type="button" data-categoria="da-tavolo" aria-pressed="false">Da tavolo</button>
+        <button type="button" data-categoria="deduzione" aria-pressed="false">Deduzione</button>
+        <button type="button" data-categoria="rompicapo" aria-pressed="false">Rompicapo</button>
+      </div>
+      <button type="button" class="multi" data-multi aria-pressed="false">Solo multigiocatore</button>
+    </div>
     <main class="grid">
-      <article class="app" id="pwa-artificiere">
+      <article class="app" id="pwa-artificiere" data-category="rompicapo" data-multiplayer="no">
         <div class="shots" role="group" aria-roledescription="carosello" aria-label="Schermate di Artificiere Amico">
           <ul class="track" tabindex="0">
             <li><img src="vetrina/pwa-artificiere-1.jpg" width="1280" height="720" alt="Artificiere Amico: partita in corso"></li>
@@ -98,13 +120,14 @@ footer button:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
           <div class="text">
             <h2>Artificiere Amico</h2>
             <p>Evita le mine: un compagno simpatico ti insegna a ragionare.</p>
+            <p class="tags">Rompicapo</p>
             <div class="row">
               <a class="open" href="pwa-artificiere/" aria-label="Apri Artificiere Amico">Apri</a>
             </div>
           </div>
         </div>
       </article>
-      <article class="app" id="pwa-briscola">
+      <article class="app" id="pwa-briscola" data-category="carte" data-multiplayer="si">
         <div class="shots" role="group" aria-roledescription="carosello" aria-label="Schermate di Briscola Amica">
           <ul class="track" tabindex="0">
             <li><img src="vetrina/pwa-briscola-1.jpg" width="1280" height="720" alt="Briscola Amica: partita in corso"></li>
@@ -120,13 +143,14 @@ footer button:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
           <div class="text">
             <h2>Briscola Amica</h2>
             <p>La briscola con un compagno simpatico che ti insegna a giocare e a contare.</p>
+            <p class="tags">Carte · Multigiocatore</p>
             <div class="row">
               <a class="open" href="pwa-briscola/" aria-label="Apri Briscola Amica">Apri</a>
             </div>
           </div>
         </div>
       </article>
-      <article class="app" id="pwa-chi-sara">
+      <article class="app" id="pwa-chi-sara" data-category="deduzione" data-multiplayer="si">
         <div class="shots" role="group" aria-roledescription="carosello" aria-label="Schermate di Chi Sarà?">
           <ul class="track" tabindex="0">
             <li><img src="vetrina/pwa-chi-sara-1.jpg" width="1280" height="720" alt="Chi Sarà?: partita in corso"></li>
@@ -142,13 +166,14 @@ footer button:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
           <div class="text">
             <h2>Chi Sarà?</h2>
             <p>Scopri chi è con domande sì/no e impara a ragionare con le probabilità.</p>
+            <p class="tags">Deduzione · Multigiocatore</p>
             <div class="row">
               <a class="open" href="pwa-chi-sara/" aria-label="Apri Chi Sarà?">Apri</a>
             </div>
           </div>
         </div>
       </article>
-      <article class="app" id="pwa-corsa-a-casa">
+      <article class="app" id="pwa-corsa-a-casa" data-category="da-tavolo" data-multiplayer="si">
         <div class="shots" role="group" aria-roledescription="carosello" aria-label="Schermate di Corsa a Casa">
           <ul class="track" tabindex="0">
             <li><img src="vetrina/pwa-corsa-a-casa-1.jpg" width="1280" height="720" alt="Corsa a Casa: partita in corso"></li>
@@ -164,13 +189,14 @@ footer button:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
           <div class="text">
             <h2>Corsa a Casa</h2>
             <p>Dado e pedine: porta le tue quattro pedine a casa, con un compagno simpatico.</p>
+            <p class="tags">Da tavolo · Multigiocatore</p>
             <div class="row">
               <a class="open" href="pwa-corsa-a-casa/" aria-label="Apri Corsa a Casa">Apri</a>
             </div>
           </div>
         </div>
       </article>
-      <article class="app" id="pwa-dama">
+      <article class="app" id="pwa-dama" data-category="da-tavolo" data-multiplayer="si">
         <div class="shots" role="group" aria-roledescription="carosello" aria-label="Schermate di Dama Amica">
           <ul class="track" tabindex="0">
             <li><img src="vetrina/pwa-dama-1.jpg" width="1280" height="720" alt="Dama Amica: partita in corso"></li>
@@ -186,13 +212,14 @@ footer button:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
           <div class="text">
             <h2>Dama Amica</h2>
             <p>Dama italiana e inglese con un compagno simpatico che ti insegna a giocare.</p>
+            <p class="tags">Da tavolo · Multigiocatore</p>
             <div class="row">
               <a class="open" href="pwa-dama/" aria-label="Apri Dama Amica">Apri</a>
             </div>
           </div>
         </div>
       </article>
-      <article class="app" id="pwa-flotta">
+      <article class="app" id="pwa-flotta" data-category="deduzione" data-multiplayer="si">
         <div class="shots" role="group" aria-roledescription="carosello" aria-label="Schermate di Flotta Amica">
           <ul class="track" tabindex="0">
             <li><img src="vetrina/pwa-flotta-1.jpg" width="1280" height="720" alt="Flotta Amica: partita in corso"></li>
@@ -208,13 +235,14 @@ footer button:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
           <div class="text">
             <h2>Flotta Amica</h2>
             <p>Affonda la flotta nemica: un compagno simpatico ti insegna a ragionare.</p>
+            <p class="tags">Deduzione · Multigiocatore</p>
             <div class="row">
               <a class="open" href="pwa-flotta/" aria-label="Apri Flotta Amica">Apri</a>
             </div>
           </div>
         </div>
       </article>
-      <article class="app" id="pwa-griglia">
+      <article class="app" id="pwa-griglia" data-category="rompicapo" data-multiplayer="no">
         <div class="shots" role="group" aria-roledescription="carosello" aria-label="Schermate di Griglia Amica">
           <ul class="track" tabindex="0">
             <li><img src="vetrina/pwa-griglia-1.jpg" width="1280" height="720" alt="Griglia Amica: partita in corso"></li>
@@ -230,13 +258,14 @@ footer button:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
           <div class="text">
             <h2>Griglia Amica</h2>
             <p>Il rompicapo dei numeri 1-9 con un compagno che ti insegna le tecniche.</p>
+            <p class="tags">Rompicapo</p>
             <div class="row">
               <a class="open" href="pwa-griglia/" aria-label="Apri Griglia Amica">Apri</a>
             </div>
           </div>
         </div>
       </article>
-      <article class="app" id="pwa-memory-game">
+      <article class="app" id="pwa-memory-game" data-category="carte" data-multiplayer="si">
         <div class="shots" role="group" aria-roledescription="carosello" aria-label="Schermate di Memory Famiglie">
           <ul class="track" tabindex="0">
             <li><img src="vetrina/pwa-memory-game-1.jpg" width="1280" height="720" alt="Memory Famiglie: partita in corso"></li>
@@ -252,13 +281,14 @@ footer button:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
           <div class="text">
             <h2>Memory Famiglie</h2>
             <p>Gioco delle coppie a carte: animali, vegetali, veicoli e aerei.</p>
+            <p class="tags">Carte · Multigiocatore</p>
             <div class="row">
               <a class="open" href="pwa-memory-game/" aria-label="Apri Memory Famiglie">Apri</a>
             </div>
           </div>
         </div>
       </article>
-      <article class="app" id="pwa-quattro">
+      <article class="app" id="pwa-quattro" data-category="da-tavolo" data-multiplayer="si">
         <div class="shots" role="group" aria-roledescription="carosello" aria-label="Schermate di Quattro in Fila">
           <ul class="track" tabindex="0">
             <li><img src="vetrina/pwa-quattro-1.jpg" width="1280" height="720" alt="Quattro in Fila: partita in corso"></li>
@@ -274,13 +304,14 @@ footer button:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
           <div class="text">
             <h2>Quattro in Fila</h2>
             <p>Allinea quattro dischi: un compagno simpatico ti insegna a giocare.</p>
+            <p class="tags">Da tavolo · Multigiocatore</p>
             <div class="row">
               <a class="open" href="pwa-quattro/" aria-label="Apri Quattro in Fila">Apri</a>
             </div>
           </div>
         </div>
       </article>
-      <article class="app" id="pwa-scopa">
+      <article class="app" id="pwa-scopa" data-category="carte" data-multiplayer="si">
         <div class="shots" role="group" aria-roledescription="carosello" aria-label="Schermate di Scopa Amica">
           <ul class="track" tabindex="0">
             <li><img src="vetrina/pwa-scopa-1.jpg" width="1280" height="720" alt="Scopa Amica: partita in corso"></li>
@@ -296,13 +327,14 @@ footer button:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
           <div class="text">
             <h2>Scopa Amica</h2>
             <p>La scopa con un compagno simpatico che ti insegna a giocare e a contare.</p>
+            <p class="tags">Carte · Multigiocatore</p>
             <div class="row">
               <a class="open" href="pwa-scopa/" aria-label="Apri Scopa Amica">Apri</a>
             </div>
           </div>
         </div>
       </article>
-      <article class="app" id="pwa-tombola">
+      <article class="app" id="pwa-tombola" data-category="da-tavolo" data-multiplayer="si">
         <div class="shots" role="group" aria-roledescription="carosello" aria-label="Schermate di Tombola Amica">
           <ul class="track" tabindex="0">
             <li><img src="vetrina/pwa-tombola-1.jpg" width="1280" height="720" alt="Tombola Amica: partita in corso"></li>
@@ -318,13 +350,14 @@ footer button:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
           <div class="text">
             <h2>Tombola Amica</h2>
             <p>La tombola in famiglia con un compagno che ti mostra quanto ti manca.</p>
+            <p class="tags">Da tavolo · Multigiocatore</p>
             <div class="row">
               <a class="open" href="pwa-tombola/" aria-label="Apri Tombola Amica">Apri</a>
             </div>
           </div>
         </div>
       </article>
-      <article class="app" id="pwa-tris">
+      <article class="app" id="pwa-tris" data-category="da-tavolo" data-multiplayer="si">
         <div class="shots" role="group" aria-roledescription="carosello" aria-label="Schermate di Tris Amico">
           <ul class="track" tabindex="0">
             <li><img src="vetrina/pwa-tris-1.jpg" width="1280" height="720" alt="Tris Amico: partita in corso"></li>
@@ -340,6 +373,7 @@ footer button:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
           <div class="text">
             <h2>Tris Amico</h2>
             <p>Il tris con un compagno simpatico che ti insegna a giocare.</p>
+            <p class="tags">Da tavolo · Multigiocatore</p>
             <div class="row">
               <a class="open" href="pwa-tris/" aria-label="Apri Tris Amico">Apri</a>
             </div>
@@ -356,6 +390,26 @@ footer button:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
       <div><button type="button" id="consent-no">Rifiuta</button><button type="button" id="consent-yes" class="yes">Accetta</button></div>
     </div>
     <script>
+const filtri = { categoria: '', multi: false };
+const applica = () => {
+  for (const app of document.querySelectorAll('.app')) {
+    app.hidden = (filtri.categoria && app.dataset.category !== filtri.categoria) || (filtri.multi && app.dataset.multiplayer !== 'si');
+  }
+};
+const barra = document.getElementById('filtri');
+if (barra) {
+  barra.hidden = false;
+  barra.addEventListener('click', (e) => {
+    const b = e.target.closest('button');
+    if (!b) return;
+    if ('multi' in b.dataset) filtri.multi = !filtri.multi;
+    else filtri.categoria = b.dataset.categoria;
+    for (const x of barra.querySelectorAll('button')) {
+      x.setAttribute('aria-pressed', String('multi' in x.dataset ? filtri.multi : x.dataset.categoria === filtri.categoria));
+    }
+    applica();
+  });
+}
 for (const box of document.querySelectorAll('.shots')) {
   const track = box.querySelector('.track');
   const prev = box.querySelector('.prev');
