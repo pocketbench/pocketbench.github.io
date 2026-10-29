@@ -1,7 +1,7 @@
 // Service worker: precache di tutti gli asset (elenco e versione generati da scripts/build.js).
 // Il dominio è condiviso con gli altri giochi: si cancellano solo le cache di questo gioco (prefisso).
 const PREFIX = 'quattro-in-fila-';
-const CACHE = `${PREFIX}63f7c3ddac`;
+const CACHE = `${PREFIX}6d636d0817`;
 const ASSETS = ["./","./css/main.css","./icons/icon-192.png","./icons/icon-512.png","./icons/icon-maskable-512.png","./icons/icon-maskable.svg","./icons/icon.svg","./index.html","./js/main.js","./manifest.webmanifest"];
 
 self.addEventListener('install', (event) => {
