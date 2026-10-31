@@ -1,7 +1,8 @@
-// Service worker: precache di tutti gli asset (elenco e versione generati da scripts/build.js).
+// Service worker: modello unico per tutti i giochi, scripts/build.js lo scrive in dist/<id>/sw.js
+// sostituendo prefisso, versione ed elenco dei file da tenere in cache.
 // Il dominio è condiviso con gli altri giochi: si cancellano solo le cache di questo gioco (prefisso).
 const PREFIX = 'tris-amico-';
-const CACHE = `${PREFIX}3867fde515`;
+const CACHE = `${PREFIX}a0a9e39a0f`;
 const ASSETS = ["./","./css/main.css","./icons/icon-192.png","./icons/icon-512.png","./icons/icon-maskable-512.png","./icons/icon-maskable.svg","./icons/icon.svg","./index.html","./js/main.js","./manifest.webmanifest"];
 
 self.addEventListener('install', (event) => {
