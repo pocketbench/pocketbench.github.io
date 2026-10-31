@@ -2,7 +2,7 @@
 // sostituendo prefisso, versione ed elenco dei file da tenere in cache.
 // Il dominio è condiviso con gli altri giochi: si cancellano solo le cache di questo gioco (prefisso).
 const PREFIX = 'meta-specchio-';
-const CACHE = `${PREFIX}7ba7e44f52`;
+const CACHE = `${PREFIX}f899157a8d`;
 const ASSETS = ["./","./css/main.css","./icons/icon-192.png","./icons/icon-512.png","./icons/icon-maskable-512.png","./icons/icon-maskable.svg","./icons/icon.svg","./index.html","./js/main.js","./manifest.webmanifest"];
 
 self.addEventListener('install', (event) => {

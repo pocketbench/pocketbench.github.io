@@ -1,0 +1,59 @@
+# Pocketbench · Giochi
+
+> Giochi da aprire nel browser o da installare su telefono e tablet. Funzionano anche senza connessione. Gratuiti, senza pubblicità e senza raccolta di dati, in italiano e inglese.
+
+Ogni gioco si apre dal proprio indirizzo, si può installare come app e ha testo ingrandibile e una modalità per chi vede male i colori.
+
+## Giochi
+
+- [Artificiere Amico](https://pocketbench.github.io/pwa-artificiere/): Evita le mine: un compagno simpatico ti insegna a ragionare. (Rompicapo)
+- [Briscola Amica](https://pocketbench.github.io/pwa-briscola/): La briscola con un compagno simpatico che ti insegna a giocare e a contare. (Carte, anche in due)
+- [Chi Sarà?](https://pocketbench.github.io/pwa-chi-sara/): Scopri chi è con domande sì/no e impara a ragionare con le probabilità. (Deduzione, anche in due)
+- [Corsa a Casa](https://pocketbench.github.io/pwa-corsa-a-casa/): Dado e pedine: porta le tue quattro pedine a casa, con un compagno simpatico. (Da tavolo, anche in due)
+- [Dama Amica](https://pocketbench.github.io/pwa-dama/): Dama italiana e inglese con un compagno simpatico che ti insegna a giocare. (Da tavolo, anche in due)
+- [Domande da Raccontare](https://pocketbench.github.io/pwa-domande-da-raccontare/): Carte-domanda per chiacchierare insieme, grandi e piccoli, senza punteggio. (Ricordi, anche in due)
+- [Flotta Amica](https://pocketbench.github.io/pwa-flotta/): Affonda la flotta nemica: un compagno simpatico ti insegna a ragionare. (Deduzione, anche in due)
+- [Griglia Amica](https://pocketbench.github.io/pwa-griglia/): Il rompicapo dei numeri 1-9 con un compagno che ti insegna le tecniche. (Rompicapo)
+- [Memory Famiglie](https://pocketbench.github.io/pwa-memory-game/): Gioco delle coppie a carte: animali, vegetali, veicoli e aerei. (Carte, anche in due)
+- [Metà Specchio](https://pocketbench.github.io/pwa-meta-specchio/): Colora l'altra metà come allo specchio: figure per tutte le età. (Spazio, anche in due)
+- [Mosaico Amico](https://pocketbench.github.io/pwa-mosaico/): Il puzzle a mosaico da 3 anni in su, con difficoltà che si adatta a te. (Rompicapo)
+- [Occhio Lampo](https://pocketbench.github.io/pwa-occhio-lampo/): Trova la figura uguale su due carte: bambini e grandi alla pari. (Carte, anche in due)
+- [Ordine in Cucina](https://pocketbench.github.io/pwa-ordine-cucina/): Uno legge la comanda, l'altro cucina: giocate in squadra, grandi e piccoli. (Cooperativi, anche in due)
+- [Palloncini Giusti](https://pocketbench.github.io/pwa-palloncini-giusti/): Tocca solo i palloncini giusti e lascia volare gli altri: tutte le età. (Riflessi, anche in due)
+- [Parole in Agguato](https://pocketbench.github.io/pwa-parole-in-agguato/): Trova le parole nascoste tra le lettere: ognuno al suo livello, tutte le età. (Parole, anche in due)
+- [Più o Meno?](https://pocketbench.github.io/pwa-piu-o-meno/): Quale carta ha più oggetti? Colpo d'occhio e numeri, ognuno al suo livello. (Numeri, anche in due)
+- [Quattro in Fila](https://pocketbench.github.io/pwa-quattro/): Allinea quattro dischi: un compagno simpatico ti insegna a giocare. (Da tavolo, anche in due)
+- [Scopa Amica](https://pocketbench.github.io/pwa-scopa/): La scopa con un compagno simpatico che ti insegna a giocare e a contare. (Carte, anche in due)
+- [Serie Amica](https://pocketbench.github.io/pwa-serie-amica/): Completa la serie di figure: bambini e grandi, ognuno al suo livello. (Rompicapo, anche in due)
+- [Suoni in Fila](https://pocketbench.github.io/pwa-suoni-in-fila/): Ascolta la sequenza di note e ripetila: ognuno al suo livello, grandi e piccoli. (Suoni, anche in due)
+- [Tombola Amica](https://pocketbench.github.io/pwa-tombola/): La tombola in famiglia con un compagno che ti mostra quanto ti manca. (Da tavolo, anche in due)
+- [Tris Amico](https://pocketbench.github.io/pwa-tris/): Il tris con un compagno simpatico che ti insegna a giocare. (Da tavolo, anche in due)
+
+## Per i motori di ricerca
+
+- [Elenco completo delle pagine](https://pocketbench.github.io/sitemap.xml)
+
+## Optional
+
+- [Informativa sulla privacy di Artificiere Amico](https://pocketbench.github.io/pwa-artificiere/privacy.html)
+- [Informativa sulla privacy di Briscola Amica](https://pocketbench.github.io/pwa-briscola/privacy.html)
+- [Informativa sulla privacy di Chi Sarà?](https://pocketbench.github.io/pwa-chi-sara/privacy.html)
+- [Informativa sulla privacy di Corsa a Casa](https://pocketbench.github.io/pwa-corsa-a-casa/privacy.html)
+- [Informativa sulla privacy di Dama Amica](https://pocketbench.github.io/pwa-dama/privacy.html)
+- [Informativa sulla privacy di Domande da Raccontare](https://pocketbench.github.io/pwa-domande-da-raccontare/privacy.html)
+- [Informativa sulla privacy di Flotta Amica](https://pocketbench.github.io/pwa-flotta/privacy.html)
+- [Informativa sulla privacy di Griglia Amica](https://pocketbench.github.io/pwa-griglia/privacy.html)
+- [Informativa sulla privacy di Memory Famiglie](https://pocketbench.github.io/pwa-memory-game/privacy.html)
+- [Informativa sulla privacy di Metà Specchio](https://pocketbench.github.io/pwa-meta-specchio/privacy.html)
+- [Informativa sulla privacy di Mosaico Amico](https://pocketbench.github.io/pwa-mosaico/privacy.html)
+- [Informativa sulla privacy di Occhio Lampo](https://pocketbench.github.io/pwa-occhio-lampo/privacy.html)
+- [Informativa sulla privacy di Ordine in Cucina](https://pocketbench.github.io/pwa-ordine-cucina/privacy.html)
+- [Informativa sulla privacy di Palloncini Giusti](https://pocketbench.github.io/pwa-palloncini-giusti/privacy.html)
+- [Informativa sulla privacy di Parole in Agguato](https://pocketbench.github.io/pwa-parole-in-agguato/privacy.html)
+- [Informativa sulla privacy di Più o Meno?](https://pocketbench.github.io/pwa-piu-o-meno/privacy.html)
+- [Informativa sulla privacy di Quattro in Fila](https://pocketbench.github.io/pwa-quattro/privacy.html)
+- [Informativa sulla privacy di Scopa Amica](https://pocketbench.github.io/pwa-scopa/privacy.html)
+- [Informativa sulla privacy di Serie Amica](https://pocketbench.github.io/pwa-serie-amica/privacy.html)
+- [Informativa sulla privacy di Suoni in Fila](https://pocketbench.github.io/pwa-suoni-in-fila/privacy.html)
+- [Informativa sulla privacy di Tombola Amica](https://pocketbench.github.io/pwa-tombola/privacy.html)
+- [Informativa sulla privacy di Tris Amico](https://pocketbench.github.io/pwa-tris/privacy.html)

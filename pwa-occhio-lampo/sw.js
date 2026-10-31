@@ -2,7 +2,7 @@
 // sostituendo prefisso, versione ed elenco dei file da tenere in cache.
 // Il dominio è condiviso con gli altri giochi: si cancellano solo le cache di questo gioco (prefisso).
 const PREFIX = 'occhio-lampo-';
-const CACHE = `${PREFIX}61b3a18c8b`;
+const CACHE = `${PREFIX}b1da7b86d3`;
 const ASSETS = ["./","./css/main.css","./icons/icon-192.png","./icons/icon-512.png","./icons/icon-maskable-512.png","./icons/icon-maskable.svg","./icons/icon.svg","./index.html","./js/main.js","./manifest.webmanifest"];
 
 self.addEventListener('install', (event) => {
