@@ -1,0 +1,20 @@
+{
+  "name": "Ordine in Cucina",
+  "short_name": "Ordine in Cucina",
+  "description": "Un gioco di squadra: chi legge la comanda la descrive a voce, chi cucina prepara gli ingredienti nell'ordine giusto. In due sullo stesso schermo o con il computer.",
+  "lang": "it",
+  "id": "./",
+  "categories": ["games"],
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#fbf1ea",
+  "theme_color": "#bf360c",
+  "icons": [
+    { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" },
+    { "src": "icons/icon.svg", "sizes": "any", "type": "image/svg+xml" }
+  ]
+}

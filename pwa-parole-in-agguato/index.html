@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="it" data-version="1.1.0">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>Parole in Agguato</title>
+    <meta name="description" content="Trova le parole nascoste in una griglia di lettere: dalle prime parole in fila ai rompicapo con gli indizi. Da 6 anni in su, con il computer, da soli o in due a turno." />
+    <meta name="theme-color" content="#2e7d32" />
+    <link rel="manifest" href="manifest.webmanifest" />
+    <link rel="icon" href="icons/icon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="icons/icon-192.png" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body>
+    <main id="app">
+      <section id="menu" class="screen menu"></section>
+      <section id="game" class="screen game" hidden>
+        <header class="game__bar">
+          <button id="exit" class="btn btn--ghost" type="button"></button>
+          <span class="game__spacer"></span>
+          <button class="tour-open" type="button" data-tour-open></button>
+          <button class="manual-open" type="button" data-manual></button>
+          <button class="usab-open" type="button" data-usability>Aa</button>
+          <button id="hintBtn" class="btn btn--accent" type="button"></button>
+        </header>
+        <div id="track" class="track" role="group"></div>
+        <div class="game__main">
+          <div class="game__tablewrap"><div id="table" class="table"></div></div>
+          <aside class="game__side">
+            <section id="tour" class="guide tour" hidden aria-live="polite"></section>
+            <p id="status" class="status" aria-live="polite"></p>
+            <p id="feedback" class="feedback" aria-live="polite"></p>
+            <section id="hint" class="advice" hidden aria-live="polite"></section>
+            <div id="companion" class="bubble" hidden aria-live="polite"></div>
+            <button id="giveUp" class="btn btn--ghost giveup" type="button"></button>
+          </aside>
+        </div>
+      </section>
+    </main>
+    <dialog id="result" class="result"></dialog>
+    <dialog id="usab" class="usab"></dialog>
+    <dialog id="manual" class="manual"></dialog>
+    <script defer src="js/main.js"></script>
+  </body>
+</html>

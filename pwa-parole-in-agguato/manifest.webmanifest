@@ -1,0 +1,20 @@
+{
+  "name": "Parole in Agguato",
+  "short_name": "Parole in Agguato",
+  "description": "Trova le parole nascoste in una griglia di lettere: dalle prime parole in fila ai rompicapo con gli indizi. Da 6 anni in su, con il computer, da soli o in due a turno.",
+  "lang": "it",
+  "id": "./",
+  "categories": ["games"],
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#eef6ee",
+  "theme_color": "#2e7d32",
+  "icons": [
+    { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" },
+    { "src": "icons/icon.svg", "sizes": "any", "type": "image/svg+xml" }
+  ]
+}

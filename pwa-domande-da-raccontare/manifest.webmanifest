@@ -1,0 +1,20 @@
+{
+  "name": "Domande da Raccontare",
+  "short_name": "Domande da Raccontare",
+  "description": "Carte-domanda per chiacchierare insieme: ognuno racconta, gli altri ascoltano. Per due o più persone di età diverse, dai 3 anni in su, senza punteggio.",
+  "lang": "it",
+  "id": "./",
+  "categories": ["games"],
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#fff3e6",
+  "theme_color": "#e65100",
+  "icons": [
+    { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" },
+    { "src": "icons/icon.svg", "sizes": "any", "type": "image/svg+xml" }
+  ]
+}

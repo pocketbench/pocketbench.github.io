@@ -1,0 +1,20 @@
+{
+  "name": "Metà Specchio",
+  "short_name": "Metà Specchio",
+  "description": "Una figura a quadretti ha una metà colorata: colora l'altra come allo specchio. Dai 3 anni in su, ognuno al proprio livello, con il computer, da soli o in due a turno.",
+  "lang": "it",
+  "id": "./",
+  "categories": ["games"],
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#e8f6f7",
+  "theme_color": "#00838f",
+  "icons": [
+    { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" },
+    { "src": "icons/icon.svg", "sizes": "any", "type": "image/svg+xml" }
+  ]
+}
