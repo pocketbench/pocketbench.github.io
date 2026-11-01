@@ -57,6 +57,16 @@ h1{margin:0;font-size:1.65rem;line-height:1.2}
 h2{margin:0;font-size:1.15rem;line-height:1.25}
 .text p{margin:2px 0 0;color:var(--muted);font-size:.93rem;line-height:1.4}
 .tags{font-size:.8rem!important;font-weight:600}
+.install{width:100%;max-width:1120px;margin:8px auto 0;padding:0 16px}
+.install details{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:10px 16px}
+.install summary{cursor:pointer;font-weight:600}
+.install summary:focus-visible{outline:3px solid var(--accent);outline-offset:4px;border-radius:6px}
+.install p{margin:8px 0;color:var(--muted);font-size:.93rem}
+.install table{width:100%;border-collapse:collapse;font-size:.93rem}
+.install th,.install td{padding:8px 10px;text-align:left;vertical-align:top;border-top:1px solid var(--line)}
+.install th{width:30%;font-weight:600}
+.install tr.mine th,.install tr.mine td{background:color-mix(in srgb,var(--accent) 14%,transparent)}
+@media(max-width:600px){.install tr,.install th,.install td{display:block;width:auto}.install th{padding-bottom:0;border-top:1px solid var(--line)}.install td{border-top:0;padding-top:2px}}
 .filters{display:flex;flex-wrap:wrap;align-items:center;gap:8px 20px;padding-top:12px}
 .cats{display:flex;flex-wrap:wrap;gap:8px}
 .filters button{padding:6px 16px;border:1px solid var(--line);border-radius:999px;background:var(--card);color:var(--ink);font:inherit;font-size:.9rem;cursor:pointer}
@@ -93,6 +103,19 @@ footer button:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
         <p class="lead">Giochi da aprire nel browser o da installare su telefono e tablet. Funzionano anche senza connessione.</p>
       </div>
     </header>
+    <div class="install">
+      <details id="installa">
+        <summary>Come installare un gioco sul tuo dispositivo</summary>
+        <p>Si installa ogni gioco, non questa pagina: aprilo con «Apri» e poi segui i passi del tuo dispositivo.</p>
+        <table>
+          <tbody>
+            <tr data-device="ios"><th scope="row">iPad e iPhone (Safari)</th><td>Tocca «Condividi» (il quadrato con la freccia in su), poi «Aggiungi alla schermata Home».</td></tr>
+            <tr data-device="android"><th scope="row">Android (Chrome)</th><td>Tocca il menu ⋮ in alto a destra, poi «Installa app».</td></tr>
+            <tr data-device="desktop"><th scope="row">Computer (Chrome, Edge)</th><td>Clicca l'icona di installazione nella barra dell'indirizzo, oppure apri il menu e scegli «Installa».</td></tr>
+          </tbody>
+        </table>
+      </details>
+    </div>
     <div class="filters" id="filtri" role="group" aria-label="Filtra i giochi" hidden>
       <div class="cats" role="group" aria-label="Categoria">
         <button type="button" data-categoria="" aria-pressed="true">Tutti</button>
@@ -627,6 +650,11 @@ footer button:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
       <div><button type="button" id="consent-no">Rifiuta</button><button type="button" id="consent-yes" class="yes">Accetta</button></div>
     </div>
     <script>
+const ios = /iPad|iPhone|iPod/.test(navigator.userAgent) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+const android = /Android/.test(navigator.userAgent);
+const riga = document.querySelector('.install tr[data-device="' + (ios ? 'ios' : android ? 'android' : 'desktop') + '"]');
+if (riga) riga.classList.add('mine');
+if (ios) document.getElementById('installa')?.setAttribute('open', '');
 const filtri = { categoria: '', multi: false };
 const applica = () => {
   for (const app of document.querySelectorAll('.app')) {
