@@ -8,6 +8,7 @@ Ogni gioco si apre dal proprio indirizzo, si può installare come app e ha testo
 
 - [Artificiere Amico](https://pocketbench.github.io/pwa-artificiere/): Evita le mine: un compagno simpatico ti insegna a ragionare. (Rompicapo)
 - [Briscola Amica](https://pocketbench.github.io/pwa-briscola/): La briscola con un compagno simpatico che ti insegna a giocare e a contare. (Carte, anche in due)
+- [Il Capomastro](https://pocketbench.github.io/pwa-capomastro/): Progetta travi in legno e prova il carico: il calcolo vero, livelli infiniti. (Rompicapo)
 - [Chi Sarà?](https://pocketbench.github.io/pwa-chi-sara/): Scopri chi è con domande sì/no e impara a ragionare con le probabilità. (Deduzione, anche in due)
 - [Corsa a Casa](https://pocketbench.github.io/pwa-corsa-a-casa/): Dado e pedine: porta le tue quattro pedine a casa, con un compagno simpatico. (Da tavolo, anche in due)
 - [Dama Amica](https://pocketbench.github.io/pwa-dama/): Dama italiana e inglese con un compagno simpatico che ti insegna a giocare. (Da tavolo, anche in due)
@@ -38,6 +39,7 @@ Ogni gioco si apre dal proprio indirizzo, si può installare come app e ha testo
 
 - [Informativa sulla privacy di Artificiere Amico](https://pocketbench.github.io/pwa-artificiere/privacy.html)
 - [Informativa sulla privacy di Briscola Amica](https://pocketbench.github.io/pwa-briscola/privacy.html)
+- [Informativa sulla privacy di Il Capomastro](https://pocketbench.github.io/pwa-capomastro/privacy.html)
 - [Informativa sulla privacy di Chi Sarà?](https://pocketbench.github.io/pwa-chi-sara/privacy.html)
 - [Informativa sulla privacy di Corsa a Casa](https://pocketbench.github.io/pwa-corsa-a-casa/privacy.html)
 - [Informativa sulla privacy di Dama Amica](https://pocketbench.github.io/pwa-dama/privacy.html)
