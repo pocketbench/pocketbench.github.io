@@ -2,7 +2,7 @@
 // sostituendo prefisso, versione ed elenco dei file da tenere in cache.
 // Il dominio è condiviso con gli altri giochi: si cancellano solo le cache di questo gioco (prefisso).
 const PREFIX = 'memory-famiglie-';
-const CACHE = `${PREFIX}143a15d24a`;
+const CACHE = `${PREFIX}e118d3d8ef`;
 const ASSETS = ["./","./css/main.css","./icons/icon-192.png","./icons/icon-512.png","./icons/icon-maskable-512.png","./icons/icon-maskable.svg","./icons/icon.svg","./index.html","./js/main.js","./manifest.webmanifest"];
 
 self.addEventListener('install', (event) => {
