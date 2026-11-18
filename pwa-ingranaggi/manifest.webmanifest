@@ -1,0 +1,20 @@
+{
+  "name": "Officina degli Ingranaggi",
+  "short_name": "Ingranaggi",
+  "description": "Collega ruote dentate e scopri la meccanica giocando: fai girare la macchina, rendila più veloce o abbastanza forte da sollevare oggetti veri. Dai 5 anni, livelli infiniti.",
+  "lang": "it",
+  "id": "./",
+  "categories": ["games", "education"],
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#eef1f4",
+  "theme_color": "#1f6f8b",
+  "icons": [
+    { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" },
+    { "src": "icons/icon.svg", "sizes": "any", "type": "image/svg+xml" }
+  ]
+}

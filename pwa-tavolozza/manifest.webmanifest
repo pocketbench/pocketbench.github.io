@@ -1,0 +1,20 @@
+{
+  "name": "Tavolozza",
+  "short_name": "Tavolozza",
+  "description": "Impara a mescolare colori veri (matite, pennarelli, pastelli, acquerelli, tempere): ottieni il colore che vedi, con lezioni, aiuti e livelli infiniti che seguono chi gioca.",
+  "lang": "it",
+  "id": "./",
+  "categories": ["games", "education"],
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#f3f1ec",
+  "theme_color": "#2f5a7a",
+  "icons": [
+    { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" },
+    { "src": "icons/icon.svg", "sizes": "any", "type": "image/svg+xml" }
+  ]
+}
