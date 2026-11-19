@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://pocketbench.github.io/</loc><lastmod>2026-11-18</lastmod></url>
+  <url><loc>https://pocketbench.github.io/</loc><lastmod>2026-11-19</lastmod></url>
+  <url><loc>https://pocketbench.github.io/pwa-acquario/</loc><lastmod>2026-11-19</lastmod></url>
   <url><loc>https://pocketbench.github.io/pwa-artificiere/</loc><lastmod>2026-11-18</lastmod></url>
   <url><loc>https://pocketbench.github.io/pwa-briscola/</loc><lastmod>2026-11-18</lastmod></url>
   <url><loc>https://pocketbench.github.io/pwa-capomastro/</loc><lastmod>2026-11-18</lastmod></url>
@@ -10,7 +11,7 @@
   <url><loc>https://pocketbench.github.io/pwa-domande-da-raccontare/</loc><lastmod>2026-11-18</lastmod></url>
   <url><loc>https://pocketbench.github.io/pwa-flotta/</loc><lastmod>2026-11-18</lastmod></url>
   <url><loc>https://pocketbench.github.io/pwa-griglia/</loc><lastmod>2026-11-18</lastmod></url>
-  <url><loc>https://pocketbench.github.io/pwa-ingranaggi/</loc><lastmod>2026-11-17</lastmod></url>
+  <url><loc>https://pocketbench.github.io/pwa-ingranaggi/</loc><lastmod>2026-11-18</lastmod></url>
   <url><loc>https://pocketbench.github.io/pwa-memory-game/</loc><lastmod>2026-11-18</lastmod></url>
   <url><loc>https://pocketbench.github.io/pwa-meta-specchio/</loc><lastmod>2026-11-18</lastmod></url>
   <url><loc>https://pocketbench.github.io/pwa-mosaico/</loc><lastmod>2026-11-18</lastmod></url>
@@ -22,6 +23,7 @@
   <url><loc>https://pocketbench.github.io/pwa-piu-o-meno/</loc><lastmod>2026-11-18</lastmod></url>
   <url><loc>https://pocketbench.github.io/pwa-quattro/</loc><lastmod>2026-11-18</lastmod></url>
   <url><loc>https://pocketbench.github.io/pwa-scopa/</loc><lastmod>2026-11-18</lastmod></url>
+  <url><loc>https://pocketbench.github.io/pwa-segno-dopo-segno/</loc><lastmod>2026-11-19</lastmod></url>
   <url><loc>https://pocketbench.github.io/pwa-serie-amica/</loc><lastmod>2026-11-18</lastmod></url>
   <url><loc>https://pocketbench.github.io/pwa-suoni-in-fila/</loc><lastmod>2026-11-18</lastmod></url>
   <url><loc>https://pocketbench.github.io/pwa-tavolozza/</loc><lastmod>2026-11-18</lastmod></url>

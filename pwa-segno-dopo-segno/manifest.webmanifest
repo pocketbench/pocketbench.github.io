@@ -1,0 +1,20 @@
+{
+  "name": "Segno dopo Segno",
+  "short_name": "Segno",
+  "description": "Impara a disegnare forma dopo forma: ricalca, unisci i puntini, copia e ricorda le forme base, poi costruisci oggetti. Dai 5 anni, livelli infiniti.",
+  "lang": "it",
+  "id": "./",
+  "categories": ["games", "education"],
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#f2efe8",
+  "theme_color": "#3d5a80",
+  "icons": [
+    { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" },
+    { "src": "icons/icon.svg", "sizes": "any", "type": "image/svg+xml" }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "name": "Acquario Amico",
+  "short_name": "Acquario",
+  "description": "Un acquario da curare con calma: dai da mangiare, pulisci le alghe, raccogli le perle e aggiungi pesci, piante e arredi. Niente fretta, niente sconfitte.",
+  "lang": "it",
+  "id": "./",
+  "categories": ["games", "kids"],
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#0b2f3f",
+  "theme_color": "#145266",
+  "icons": [
+    { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" },
+    { "src": "icons/icon.svg", "sizes": "any", "type": "image/svg+xml" }
+  ]
+}
