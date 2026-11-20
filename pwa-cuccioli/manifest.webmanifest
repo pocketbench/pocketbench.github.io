@@ -1,0 +1,42 @@
+{
+  "name": "Cucciolo Amico",
+  "short_name": "Cucciolo",
+  "description": "Un cucciolo di cane o di gatto da curare con calma: scegli la razza, dagli il cibo giusto, giocate insieme e guadagna stelle per casette, giochi e scenari.",
+  "lang": "it",
+  "id": "./",
+  "categories": [
+    "games",
+    "kids"
+  ],
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#3b2a1f",
+  "theme_color": "#a8612f",
+  "icons": [
+    {
+      "src": "icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/icon-maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "icons/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}
