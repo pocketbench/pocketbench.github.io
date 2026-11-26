@@ -1,0 +1,42 @@
+{
+  "name": "Officina dei Circuiti",
+  "short_name": "Circuiti",
+  "description": "Collega fili, accendi luci e trova i guasti. Quattro percorsi per scoprire l’elettricità con livelli infiniti.",
+  "lang": "it",
+  "id": "./",
+  "categories": [
+    "games",
+    "education"
+  ],
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#f2f1e8",
+  "theme_color": "#143b39",
+  "icons": [
+    {
+      "src": "icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/icon-maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "icons/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}
