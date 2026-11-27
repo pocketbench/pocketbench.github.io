@@ -1,0 +1,42 @@
+{
+  "name": "Officina 3D",
+  "short_name": "Officina 3D",
+  "description": "Esplora le stanze e collauda l’impianto virtuale della casa.",
+  "lang": "it",
+  "id": "./",
+  "categories": [
+    "games",
+    "education"
+  ],
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#101922",
+  "theme_color": "#101922",
+  "icons": [
+    {
+      "src": "icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/icon-maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "icons/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}

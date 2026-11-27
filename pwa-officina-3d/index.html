@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="it" data-version="1.0.0">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Officina 3D · gioco gratis nel browser</title>
+<meta name="theme-color" content="#101922">
+<meta name="description" content="Esplora le stanze e collauda l’impianto virtuale della casa.">
+<link rel="manifest" href="manifest.webmanifest" />
+<link rel="icon" href="icons/icon.svg" />
+<link rel="apple-touch-icon" href="icons/icon-192.png" />
+<link rel="stylesheet" href="css/main.css" />
+    <link rel="canonical" href="https://pocketbench.github.io/pwa-officina-3d/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Pocketbench · Giochi" />
+    <meta property="og:locale" content="it_IT" />
+    <meta property="og:title" content="Officina 3D · gioco gratis nel browser" />
+    <meta property="og:description" content="Esplora le stanze, monta comandi e collauda l’impianto virtuale della casa." />
+    <meta property="og:url" content="https://pocketbench.github.io/pwa-officina-3d/" />
+    <meta property="og:image" content="https://pocketbench.github.io/vetrina/pwa-officina-3d-1.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Officina 3D · gioco gratis nel browser" />
+    <meta name="twitter:description" content="Esplora le stanze, monta comandi e collauda l’impianto virtuale della casa." />
+    <meta name="twitter:image" content="https://pocketbench.github.io/vetrina/pwa-officina-3d-1.jpg" />
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":["VideoGame","SoftwareApplication"],"name":"Officina 3D","description":"Esplora le stanze, monta comandi e collauda l’impianto virtuale della casa.","url":"https://pocketbench.github.io/pwa-officina-3d/","image":"https://pocketbench.github.io/vetrina/pwa-officina-3d-1.jpg","applicationCategory":"GameApplication","operatingSystem":"Any","genre":"Rompicapo","inLanguage":["it","en"],"playMode":"SinglePlayer","isAccessibleForFree":true,"softwareVersion":"1.0.0","offers":{"@type":"Offer","price":"0","priceCurrency":"EUR"},"publisher":{"@type":"Organization","name":"Pocketbench","url":"https://pocketbench.github.io/"},"isPartOf":{"@type":"WebSite","name":"Pocketbench · Giochi","url":"https://pocketbench.github.io/"}}</script>
+  </head>
+<body>
+<section id="menu" class="screen menu"><article class="about"><h1>Officina 3D</h1><p>Esplora le stanze, monta comandi e collauda l’impianto virtuale della casa.</p><p>Rompicapo. Gratis, senza pubblicità e senza raccolta di dati; funziona anche senza connessione e si può installare su telefono e tablet. In italiano e inglese.</p><h2>Come si gioca</h2><p>Monta e collauda i circuiti di una casa virtuale.</p><ul><li><strong>Monta</strong> Trascina la stanza per ruotarla. Scegli Luce o Interruttore e tocca una superficie.</li><li><strong>Collega</strong> Gira i componenti e tocca due morsetti per unirli. Due tocchi sul filo lo staccano.</li><li><strong>Collauda</strong> Prova i pulsanti e controlla le luci. In cucina prova ogni carico e poi tutti insieme.</li></ul><h2>Attenzione</h2><ul><li><strong>Impianto virtuale</strong> Le soglie termiche e le protezioni seguono il modello didattico del gioco.</li><li><strong>Prove della cucina</strong> Cambiare la sezione di un cavo, una protezione o un collegamento azzera il collaudo. Inserisci la spina del frigo prima di provare i carichi.</li></ul><h2>Domande e risposte</h2><dl><dt>Come trovo un collegamento?</dt><dd>Il consiglio apre una lezione che indica i morsetti e spiega ogni passo.</dd><dt>Posso continuare più tardi?</dt><dd>Riprendi riapre l’ultimo incarico con i punti montati, i fili, la sezione dei cavi e le prove salvate su questo dispositivo.</dd><dt>Cosa cambia in un’altra cucina?</dt><dd>Cambiano potenza dei carichi, lunghezza dei percorsi e alcune tarature di partenza. Rivedi la sezione dei fili prima di collaudare.</dd><dt>Perché la luce salta?</dt><dd>Controlla la prova per capire se è presente un corto o se il carico supera la protezione del ramo.</dd></dl><div lang="en"><h2>Officina 3D: how to play</h2><p>Assemble and test the circuits of a virtual house.</p><ul><li><strong>Mount</strong> Drag to rotate the room. Choose Light or Switch and tap a surface.</li><li><strong>Connect</strong> Flip the components and tap two terminals to join them. Double-tap a wire to remove it.</li><li><strong>Test</strong> Try the switches and check the lights. In the kitchen, test every load and then all of them together.</li></ul></div></article></section>
+<section id="game" class="game game--full" hidden>
+
+<header class="masthead"><div class="game-tools"><button id="exit" type="button"></button><button data-manual class="manual-open" type="button"></button><button data-usability class="usab-open" type="button">Aa</button><button id="hintBtn" type="button"></button></div><nav id="tabs" class="tabs"></nav></header>
+<main class="game__main"><aside class="brief" id="brief"><div class="index" id="index"></div><h2 id="title"></h2><p id="goal"></p><label for="job" id="job-label"></label><select id="job"></select><section class="lesson" id="lesson" aria-live="polite" hidden></section><div class="brief-actions" id="actions"></div><div class="status" id="status" role="status"></div></aside><section class="stage" id="stage"><div class="stagebar" id="stagebar"></div><div class="view" id="view"></div><div class="stagefoot" id="stagefoot"></div></section></main>
+</section>
+<dialog id="hint" data-hint-panel aria-labelledby="hint-title"><h2 id="hint-title"></h2><div id="hint-content"></div><button id="hintClose" data-close-hint type="button"></button></dialog>
+<dialog id="manual" class="manual"></dialog>
+<dialog id="usab" class="usab"></dialog>
+<script defer src="js/main.js"></script>
+</body>
+</html>
