@@ -12,8 +12,8 @@
   "scope": "./",
   "display": "standalone",
   "orientation": "any",
-  "background_color": "#f2f1e8",
-  "theme_color": "#143b39",
+  "background_color": "#e8edf3",
+  "theme_color": "#111e30",
   "icons": [
     {
       "src": "icons/icon-192.png",
